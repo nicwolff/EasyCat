@@ -1,0 +1,7 @@
+config.toml
+easycat.db
+easycat.log
+.coverage
+.venv
+.ruff_cache
+.pytest_cache

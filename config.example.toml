@@ -1,0 +1,22 @@
+# EasyCat Configuration
+# Copy this file to config.toml and fill in your values
+
+[quickbooks]
+# Get these from https://developer.intuit.com
+client_id = 'your-client-id'
+client_secret = 'your-client-secret'
+
+# 'sandbox' or 'production'
+environment = 'sandbox'
+
+# OAuth redirect URI (must match your Intuit app settings)
+redirect_uri = 'http://localhost:8085/callback'
+
+[database]
+# Path to SQLite database file (relative to config or absolute)
+path = 'easycat.db'
+
+[security]
+# Encryption key for storing tokens (generate with: python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())")
+# If not set, tokens are stored unencrypted (not recommended for production)
+encryption_key = ''
